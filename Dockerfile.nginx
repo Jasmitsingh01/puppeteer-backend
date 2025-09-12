@@ -1,0 +1,23 @@
+FROM jasmits007691/puppeteer-backend:live
+
+# Install nginx
+RUN apt-get update && apt-get install -y nginx && rm -rf /var/lib/apt/lists/*
+
+# Install puppeteer-extra and stealth plugin
+RUN npm install puppeteer-extra puppeteer-extra-plugin-stealth
+
+# Copy updated index.js with puppeteer-extra
+COPY index-puppeteer-extra.js /app/index.js
+
+# Create nginx configuration for reverse proxy
+COPY nginx-devtools.conf /etc/nginx/sites-available/default
+
+# Create a new run script that includes nginx
+COPY run-with-nginx.sh /app/run-with-nginx.sh
+RUN chmod +x /app/run-with-nginx.sh
+
+# Expose nginx port for DevTools proxy
+EXPOSE 8080
+
+# Use the new run script
+CMD ["/app/run-with-nginx.sh"]
