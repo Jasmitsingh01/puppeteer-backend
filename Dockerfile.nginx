@@ -14,10 +14,11 @@ COPY nginx-devtools.conf /etc/nginx/sites-available/default
 
 # Create a new run script that includes nginx
 COPY run-with-nginx.sh /app/run-with-nginx.sh
-RUN chmod +x /app/run-with-nginx.sh
+# Fix line endings and set permissions
+RUN sed -i 's/\r$//' /app/run-with-nginx.sh && chmod +x /app/run-with-nginx.sh
 
-# Expose nginx port for DevTools proxy
+
+## Expose nginx port for DevTools proxy
 EXPOSE 8080
 
-# Use the new run script
-CMD ["/app/run-with-nginx.sh"]
+ENTRYPOINT ["/app/run-with-nginx.sh"]
