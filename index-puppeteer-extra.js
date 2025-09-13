@@ -1,11 +1,10 @@
-const puppeteer = require('puppeteer-extra');
+const puppeteer = require('puppeteer');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const fs = require('fs');
 const http = require('http');
 
 // Use stealth plugin
 puppeteer.use(StealthPlugin());
-
 (async () => {
     const browser = await puppeteer.launch({
         headless: false,
