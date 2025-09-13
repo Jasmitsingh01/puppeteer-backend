@@ -10,7 +10,7 @@ RUN npm install puppeteer-extra puppeteer-extra-plugin-stealth
 COPY index-puppeteer-extra.js /app/index.js
 
 # Create nginx configuration for reverse proxy
-COPY nginx-devtools.conf /etc/nginx/sites-available/default
+COPY nginx-devtools.conf /etc/nginx/nginx.conf
 
 # Create a new run script that includes nginx
 COPY run-with-nginx.sh /app/run-with-nginx.sh
