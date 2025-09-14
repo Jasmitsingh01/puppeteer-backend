@@ -29,7 +29,8 @@ puppeteer.use(StealthPlugin());
             '--display=:99'
         ],  
         defaultViewport: null,
-        userDataDir: './user-data',
+        userDataDir: '/app/my-profile',
+        dumpio: true,
       });
 
   const browserWSEndpoint = browser.wsEndpoint();

@@ -1,0 +1,21 @@
+/my-profile
+/my-profile/Default/
+/my-profile/Default/Cache/
+/my-profile/Default/Code Cache/
+/my-profile/Default/GPUCache/
+/my-profile/ShaderCache/
+/my-profile/GrShaderCache/
+/my-profile/GraphiteDawnCache/
+/my-profile/DawnGraphiteCache/
+/my-profile/DawnWebGPUCache/
+/my-profile/Default/DawnGraphiteCache/
+/my-profile/Default/DawnWebGPUCache/
+/my-profile/Default/VideoDecodeStats/
+/my-profile/Default/Local Storage/
+/my-profile/Default/Session Storage/
+/my-profile/Default/IndexedDB/
+/my-profile/Default/WebStorage/
+/my-profile/Default/blob_storage/
+/my-profile/Crashpad/
+/my-profile/component_crx_cache/
+/my-profile/extensions_crx_cache/

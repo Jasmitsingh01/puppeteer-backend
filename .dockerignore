@@ -1,0 +1,14 @@
+node_modules
+.git
+# Exclude unnecessary Chrome profile files
+my-profile/Cache
+my-profile/CacheStorage
+my-profile/Code Cache
+my-profile/GPUCache
+my-profile/Service Worker
+my-profile/Session Storage
+my-profile/VideoDecodeStats
+my-profile/blob_storage
+my-profile/IndexedDB
+my-profile/Local Storage
+my-profile/shared_proto_db

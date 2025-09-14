@@ -28,6 +28,12 @@ FLUXBOX_PID=$!
 # Wait for window manager
 sleep 2
 
+# Copy Chrome profile data if available
+if [ -d "/app/profile-data" ] && [ "$(ls -A /app/profile-data)" ]; then
+  echo "Copying Chrome profile data..."
+  /app/copy-profile.sh
+fi
+
 # Start the VNC server
 echo "Starting VNC server..."
 x11vnc -display :99 -nopw -forever -shared -rfbport 5900 -listen localhost &
