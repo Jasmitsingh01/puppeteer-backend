@@ -19,6 +19,6 @@ RUN sed -i 's/\r$//' /app/run-with-nginx.sh && chmod +x /app/run-with-nginx.sh
 
 
 ## Expose nginx port for DevTools proxy
-EXPOSE 8080
+EXPOSE 9223
 
 ENTRYPOINT ["/app/run-with-nginx.sh"]
