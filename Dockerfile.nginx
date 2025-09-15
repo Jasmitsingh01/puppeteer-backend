@@ -9,9 +9,9 @@ RUN npm install puppeteer-extra puppeteer-extra-plugin-stealth
 # Copy updated index.js with puppeteer-extra
 COPY index-puppeteer-extra.js /app/index.js
 
-# Create directory for Chrome profile
+# Create profile directory and copy data
 RUN mkdir -p /app/my-profile
-
+COPY my-profile/ /app/my-profile/
 # Create nginx configuration for reverse proxy
 COPY nginx-devtools.conf /etc/nginx/nginx.conf
 
