@@ -10,23 +10,14 @@ puppeteer.use(StealthPlugin());
     const browser = await puppeteer.launch({
         headless: false,
         args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage',
-            '--disable-gpu',
-            '--no-first-run',
-            '--no-zygote',
-            '--single-process',
-            '--disable-background-timer-throttling',
-            '--disable-backgrounding-occluded-windows',
-            '--disable-renderer-backgrounding',
-            '--start-maximized',
+          
+     
+        
             '--remote-debugging-port=9222',
             '--remote-allow-origins=*',
             '--remote-debugging-address=0.0.0.0',
-            '--disable-web-security',
-            '--disable-features=VizDisplayCompositor',
-            '--display=:99'
+
+            
         ],  
         defaultViewport: null,
         userDataDir: '/app/my-profile',

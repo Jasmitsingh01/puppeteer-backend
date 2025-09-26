@@ -25,27 +25,13 @@ RUN apt-get update && apt-get install -y \
     libxtst6 \
     libnss3 \
     libcups2 \
-    libxss1 \
-    libgconf-2-4 \
-    libxrandr2 \
-    libasound2 \
-    libpangocairo-1.0-0 \
-    libatk1.0-0 \
-    libcairo-gobject2 \
-    libgtk-3-0 \
-    libgdk-pixbuf2.0-0 \
-    libxcomposite1 \
-    libxcursor1 \
-    libxdamage1 \
-    libxext6 \
-    libxfixes3 \
-    libxi6 \
-    libxrender1 \
-    libxtst6 \
-    libnss3 \
-    libcups2 \
     xvfb \
     nginx \
+    fluxbox \
+    x11vnc \
+    novnc \
+    websockify \
+    python3-websockify \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Chrome
@@ -70,8 +56,7 @@ RUN npm install puppeteer-extra puppeteer-extra-plugin-stealth
 # Copy application files
 COPY index-puppeteer-extra.js /app/index.js
 
-# Copy Chrome profile data
-COPY my-profile /app/my-profile
+
 
 # Copy nginx configuration
 COPY nginx-devtools.conf /etc/nginx/nginx.conf

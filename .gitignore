@@ -19,3 +19,4 @@
 /my-profile/Crashpad/
 /my-profile/component_crx_cache/
 /my-profile/extensions_crx_cache/
+/node_modules
