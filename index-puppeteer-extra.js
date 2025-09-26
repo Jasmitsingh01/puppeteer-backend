@@ -10,18 +10,13 @@ puppeteer.use(StealthPlugin());
     const browser = await puppeteer.launch({
         headless: false,
         args: [
-          
-     
-        
+            '--no-sandbox',
             '--remote-debugging-port=9222',
             '--remote-allow-origins=*',
             '--remote-debugging-address=0.0.0.0',
-
-            
+       
         ],  
-        defaultViewport: null,
-        userDataDir: '/app/my-profile',
-        dumpio: true,
+     
       });
 
   const browserWSEndpoint = browser.wsEndpoint();
